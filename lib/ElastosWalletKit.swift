@@ -49,6 +49,18 @@ open class ElastosWalletKit  {
     return seedLen
   }
   
+  public static func Verify(publicKey: String?, data: Data, len: Int, signedData:Data,signedLen:Int) -> Bool {
+        
+        
+      let verifyResult = AbstractLayer.Verify(publicKey: publicKey,
+                                                data: data,
+                                                len: len,
+                                                signedData: signedData,
+                                                signedLen: signedLen)
+        
+     return verifyResult
+  }
+    
   public static func Sign(privateKey: String?, data: Data, len: Int, signedData: inout Data) -> Int {
     let signedDataLen = AbstractLayer.Sign(privateKey: privateKey,
                                            data: data,

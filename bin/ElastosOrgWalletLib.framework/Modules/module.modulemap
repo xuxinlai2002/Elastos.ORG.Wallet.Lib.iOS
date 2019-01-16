@@ -1,0 +1,4 @@
+framework module ElastosOrgWalletLib {
+  header "ElastosOrgWalletLib-Swift.h"
+  requires objc
+}
